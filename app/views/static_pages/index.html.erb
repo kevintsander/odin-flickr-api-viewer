@@ -1,0 +1,10 @@
+<%= form_with url: photos_path, method: :get do |form| %>
+  <%= form.label :user_id %>
+  <%= form.text_field :user_id %>
+  <%= form.submit %>
+<% end %>
+<div class="images">
+  <% @photos.each do |photo| %>
+    <%= image_tag photo%>
+  <% end %>
+</div>
